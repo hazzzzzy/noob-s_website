@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hazy</title>
+    <link rel="shortcut icon" href="0.ico">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="daohanglan row flex" style="justify-content:space-between">
+        <div><a class="a1" href="">个人简历</a></div>
+        <div><a class="a1" href="others.html">附件</a></div>
+    </div>
+    <div class="flex column" style="font-size:25px">
+        <!-- 信息栏 -->
+        <div class="flex row xxl ">
+            <div class="flex row ">
+                <!-- 字段1 -->
+                <div class="flex column ziduan ">
+                    <div class="ziduan_value"><b>姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名:</b></div>
+                    <div class="ziduan_value"><b>民&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp族:</b></div>
+                    <div class="ziduan_value"><b>电&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp话:</b></div>
+                    <div class="ziduan_value"><b>邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱:</b></div>
+                    <div class="ziduan_value"><b>籍&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp贯:</b></div>
+                </div>
+                <!-- 详细信息1 -->
+                <div class="flex column ziduan_item">
+                    <div class="ziduan_item_value">李荣展</div>
+                    <div class="ziduan_item_value">汉</div>
+                    <div class="ziduan_item_value">13715956150</div>
+                    <div class="ziduan_item_value">279031428@qq.com</div>
+                    <div class="ziduan_item_value">广东汕头</div>
+                </div>
+            </div>
+            <!-- 字段2 -->
+            <div class="flex row">
+                <div class="flex column ziduan ">
+                    <div class="ziduan_value"><b>生&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日:</b></div>
+                    <div class="ziduan_value"></div>
+                    <div class="ziduan_value"><b>政治面貌:</b></div>
+                    <div class="ziduan_value"><b>毕业院校:</b></div>
+                    <div class="ziduan_value"><b>学&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp历:</b></div>
+                </div>
+                <!-- 详细信息2 -->
+                <div class="flex column ziduan_item">
+                    <div class="ziduan_item_value">2000/12/2</div>
+                    <div class="ziduan_item_value"></div>
+                    <div class="ziduan_item_value">群众</div>
+                    <div class="ziduan_item_value">北京理工大学珠海学院</div>
+                    <div class="ziduan_item_value">本科</div>
+                </div>
+            </div>
+
+            <!-- 头像栏 -->
+            <div class="img">
+                <img src="LRZ.jpg" width='140px' height='200px' alt="证件照">
+            </div>
+        </div>
+        <!-- 教育背景 -->
+        <div class="title div_center">
+            <div class="title_value">教育背景</div>
+        </div>
+        <div class="width85 div_center border">
+            <div class="flex row" style="justify-content:space-between;">
+                <div>北京理工大学珠海学院</div>
+                <div>2019.07-2023.06</div>
+                <div>数据科学与大数据技术（本科）</div>
+            </div>
+            <div style="margin-top:5px;"><b>主修课程：</b> 高等微积分，python编程与进阶，数据库技术基础，数学建模，概率统计基础，离散数学，线性代数等</div>
+        </div>
+        <!-- 项目经历  -->
+        <div class="title div_center">
+            <div class="title_value">项目经历</div>
+        </div>
+        <div class="border div_center width85">
+            <!-- 爬虫 -->
+            <div class=" div_center flex column">
+                <div style="margin:5px;font-size:35px;text-align:center;"><b>撰写网络爬虫课程论文</b></div>
+                <div style="margin:5px"><u> 项目背景</u>：爬取”美食天下”网站的菜谱至csv内并进行可视化处理与分析。</div>
+                <div style="margin:5px"><u> 实现步骤</u>：①查看并分析网站的源代码
+                    ②调用python的requests、beautifulsoup与pandas模块爬取并处理100页菜谱共2000条数据导出至csv
+                    ③可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。</div>
+            </div>
+            <!-- flask -->
+            <div class=" div_center flex column">
+                <div style="margin:5px;font-size:35px;text-align:center;"><b>使用flask、html与css制作学生画像系统</b></div>
+                <div style="margin:5px"><u> 项目背景</u>：制作网页读取数据库中的学生信息并显示</div>
+                <div style="margin:5px"><u>
+                        实现步骤</u>：①使用html与css搭建网页框架（添加导航栏实现分别跳转功能），分别制作index(引导页面)，all_pic(浏览pyecharts生成的6种图表)，student_table(使用一个表格框起所有学生姓名，点击姓名可跳转到该学生详细信息)及teammate(分工说明)网页
+                    ②将csv文件导入数据库并使用pandas读取数据库内容 ③使用pyecharts将每一个学生的个人信息进行绘图拼接，存为html ④使用flask的蓝图功能联系四个网页
+                    ③可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。</div>
+                <div style="margin:5px"><u> 不足</u>：未能实现网页直接读取数据库及在网页对数据库进行增删改查功能，只能静态显示。</div>
+            </div>
+        </div>
+        <!-- 校外实践  -->
+        <div class="title div_center">
+            <div class="title_value">校外实践</div>
+        </div>
+        <div class="border width85 div_center">
+            <div class="flex row" style="justify-content:space-between;">
+                <div>小学主讲教师</div>
+                <div>2022.2.21 - 8.31 </div>
+                <div>担任珠海中大附小后环校区的科学实验课主讲教师</div>
+            </div>
+        </div>
+        <!-- 技能证书  -->
+        <div class="title div_center">
+            <div class="title_value">技能证书与奖项</div>
+        </div>
+        <div class="flex column div_center width85 border">
+            <div style="margin-top: 5px;margin-bottom:5px;">普通话二级乙等； </div>
+            <div style="margin-top: 5px;margin-bottom:5px;">大学英语四级（CET-4），可运用查阅国外论文；</div>
+            <div style="margin-top: 5px;margin-bottom:5px;">2021亚太建模比赛小组三等奖； </div>
+        </div>
+        <!-- 自我评价  -->
+        <div class="title div_center">
+            <div class="title_value">自我评价</div>
+        </div>
+        <div>
+            <div class="border width85  flex column" style="margin:20px auto">
+                <div style="margin:5px">1.具备扎实的python基础知识，熟练使用python收集预处理数据，初步掌握使用 pandas 处理数据的能力。</div>
+                <div style="margin:5px">2.了解requests、selenium、beautifulsoup与正则表达式，可使用其以进行简单的网页爬取。（见附件）</div>
+                <div style="margin:5px">3.初步熟悉bp神经网络的原理与使用python的numpy库进行搭建，其他种类的神经网络如CNN/RNN等正在学习中。</div>
+                <div style="margin:5px">4.了解flask、html与css，可以使用它们制作简单的网页（见附件）</div>
+                <div style="margin:5px">5.熟练使用 latex 排版，具有需求分析与拓展思考能力，善于沟通，贴近用户</div>
+                <div style="margin:5px">6.了解linux系统的基本操作指令</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
