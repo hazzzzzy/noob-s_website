@@ -81,19 +81,35 @@
             <div class=" div_center flex column">
                 <div style="margin:5px;font-size:35px;text-align:center;"><b>撰写网络爬虫课程论文</b></div>
                 <div style="margin:5px"><u> 项目背景</u>：爬取”美食天下”网站的菜谱至csv内并进行可视化处理与分析。</div>
-                <div style="margin:5px"><u> 实现步骤</u>：①查看并分析网站的源代码
-                    ②调用python的requests、beautifulsoup与pandas模块爬取并处理100页菜谱共2000条数据导出至csv
-                    ③可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。</div>
+                <div style="margin:5px"><u> 实现步骤</u>：<br>
+                    ①添加header以绕过反爬，调用python的requests、beautifulsoup与pandas模块爬取并处理100页菜谱共2000条数据导出至csv <br>
+                    ②可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。</div>
             </div>
-            <!-- flask -->
+            <!-- 学生画像 -->
             <div class=" div_center flex column">
-                <div style="margin:5px;font-size:35px;text-align:center;"><b>使用flask、html与css制作学生画像系统</b></div>
-                <div style="margin:5px"><u> 项目背景</u>：制作网页读取数据库中的学生信息并显示</div>
+                <div style="margin:5px;font-size:35px;text-align:center;"><b>使用flask/pymysql/pyecharts制作学生画像系统</b></div>
+                <div style="margin:5px"><u> 项目背景</u>：制作网页读取数据库中的学生信息并绘制多种图来清晰判断总体情况</div>
                 <div style="margin:5px"><u>
-                        实现步骤</u>：①使用html与css搭建网页框架（添加导航栏实现分别跳转功能），分别制作index(引导页面)，all_pic(浏览pyecharts生成的6种图表)及student_table(使用一个表格框起所有学生姓名，点击姓名可跳转到该学生详细信息)
-                    ②将csv文件导入数据库并使用pandas读取数据库内容 ③使用pyecharts将每一个学生的个人信息进行绘图拼接，存为html ④使用flask的蓝图功能联系四个网页
-                    ③可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。</div>
+                        实现步骤</u>：<br>
+                    ①使用html与css搭建网页框架(添加导航栏实现分别跳转功能),分别制作index(引导页面)/all_pic(浏览pyecharts生成的6种图表)/student_table(使用一个表格框起所有学生姓名，点击姓名可跳转到该学生详细信息)<br>
+                    ②将csv文件导入数据库并使用pandas读取数据库内容 ③使用pyecharts将每一个学生的个人信息进行绘图拼接，存为html ④使用flask的蓝图功能联系四个网页<br>
+                    ③可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。<br></div>
                 <div style="margin:5px"><u> 不足</u>：未能实现网页直接读取数据库及在网页对数据库进行增删改查功能，只能静态显示。</div>
+            </div>
+            <!-- 后台 -->
+            <div class=" div_center flex column">
+                <div style="margin:5px;font-size:35px;text-align:center;"><b>使用flask/pymysql/bootstrap5全栈开发简易的后台管理系统</b></div>
+                <div style="margin:5px">
+                    <u> 项目背景</u>：制作网页读取数据库中的学生信息并按成绩大小排列显示</div>
+                <div style="margin:5px"><u>实现步骤</u>：<br>
+                    ①调用pymysql编写类以实现对表的<b>增删改查</b> <br>
+                    ②在数据库创建两张表user(用户账号密码)/grade(学生成绩)并输入信息 <br>
+                    ③调用第一步的类以实现对数据库的增删改查，共包含以下页面：<br>
+                    <b>根页面</b>(登录页面):输入账号密码与user表中数据匹配，如匹配成功转到后台页面，失败则显示密码错误<br>
+                    <b>后台页面</b>:以表格形式显示学生信息，支持按三个学科分数进行正反序排序；并且有三个功能：增加/修改/删除，分别对应add/change页面与删除功能<br>
+                    <b>add页面</b>:输入学生成绩增加到grade表中<br>
+                    <b>change页面</b>:点击该行的修改按钮即可跳转到修改页面并在该学生成绩基础上修改成绩
+                </div>
             </div>
         </div>
         <!-- 校外实践  -->
