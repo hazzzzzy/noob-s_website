@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    /* height: 100vh; */
+    background-color: rgb(222, 221, 221);
+}
+
+.flex {
+    display: flex;
+}
+
+.daohanglan {
+    height: 50px;
+    width: 400px;
+    /* margin-top: 50px; */
+    margin: 30px auto;
+    border-radius: 30px;
+    border: 4px solid rgb(72, 72, 72);
+    background-color: rgb(146, 146, 146);
+    /* padding: 0px; */
+}
+a.a1{
+    display:block;
+    width: 195px;/*设置块的宽度*/
+    height: 50px;/*设置块的长度*/
+    transition:0.2s;
+    border-radius: 25px;
+    font-size: 30px;
+    text-align: center;/*字体居中*/
+    text-decoration: none;/*去掉下划线*/
+    /* margin: 4px; */
+}
+a.a1:hover{
+    background-color: rgb(255, 255, 255);/*鼠标点击后显示的颜色*/		
+}
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.div_center {
+    margin: 0 auto;
+}
+
+.title {
+    width: 400px;
+    border: 4px solid rgb(72, 72, 72);
+    background-color: rgb(146, 146, 146);
+    border-radius: 20px;
+    margin: 15px auto;
+}
+
+.title_value {
+    text-align: center;
+    font-weight: normal;
+    margin: 4px auto;
+    font-size: 30px;
+    color: black;
+}
+
+.border {
+    border-radius: 20px;
+    border: 4px solid rgb(72, 72, 72);
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.xxl {
+    border-radius: 20px;
+    border: 4px solid rgb(72, 72, 72);
+    height: 220px;
+    margin: 10px auto;
+    /* justify-content: space-between; */
+}
+
+.ziduan {
+    margin: 5px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    text-align: center;
+    height: 200px;
+    width: 120px;
+    justify-content: space-between;
+
+}
+
+.ziduan_value {
+    /* margin: 3px auto ; */
+    height: 30px;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.ziduan_item {
+    margin: 5px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    height: 200px;
+    width: 260px;
+    justify-content: space-between;
+}
+
+.ziduan_item_value {
+    /* margin: 3px auto; */
+    height: 30px;
+    justify-content: space-between;
+}
+
+.img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+.width85 {
+    width: 85%;
+}
+
+.whitebg{
+    background-color: whitesmoke;
+}
