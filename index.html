@@ -80,8 +80,8 @@
             <!-- 爬虫 -->
             <div class=" div_center flex column">
                 <div style="margin:5px;font-size:35px;text-align:center;"><b>撰写网络爬虫课程论文</b></div>
-                <div style="margin:5px"><u> 项目背景</u>：爬取”美食天下”网站的菜谱至csv内并进行可视化处理与分析。</div>
-                <div style="margin:5px"><u> 实现步骤</u>：<br>
+                <div style="margin:5px"><b> 项目背景</b>：爬取”美食天下”网站的菜谱至csv内并进行可视化处理与分析。</div>
+                <div style="margin:5px"><b> 实现步骤</b>：<br>
                     ①添加header以绕过反爬，调用python的requests、beautifulsoup与pandas模块爬取并处理100页菜谱共2000条数据导出至csv <br>
                     ②可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。</div>
             </div>
@@ -89,21 +89,20 @@
             <!-- 学生画像 -->
             <div class=" div_center flex column">
                 <div style="margin:5px;font-size:35px;text-align:center;"><b>使用flask/pymysql/pyecharts制作学生画像系统</b></div>
-                <div style="margin:5px"><u> 项目背景</u>：制作网页读取数据库中的学生信息并绘制多种图来清晰判断总体情况</div>
-                <div style="margin:5px"><u>
-                        实现步骤</u>：<br>
+                <div style="margin:5px"><b> 项目背景</b>：制作网页读取数据库中的学生信息并绘制多种图来清晰判断总体情况</div>
+                <div style="margin:5px"><b>实现步骤</b>：<br>
                     ①使用html与css搭建网页框架(添加导航栏实现分别跳转功能),分别制作index(引导页面)/all_pic(浏览pyecharts生成的6种图表)/student_table(使用一个表格框起所有学生姓名，点击姓名可跳转到该学生详细信息)<br>
                     ②将csv文件导入数据库并使用pandas读取数据库内容 ③使用pyecharts将每一个学生的个人信息进行绘图拼接，存为html ④使用flask的蓝图功能联系四个网页<br>
                     ③可视化：使用jieba模块对原料数据进行分词统计与排序后输出使用次数最多的前十名，同时可视化处理为词云图并调用pyecharts模块以排序后的数据生成条形图与饼图。<br></div>
-                <div style="margin:5px"><u> 不足</u>：未能实现网页直接读取数据库及在网页对数据库进行增删改查功能，只能静态显示。</div>
+                <div style="margin:5px"><b> 不足</b>：未能实现网页直接读取数据库及在网页对数据库进行增删改查功能，只能静态显示。</div>
             </div>
             <hr>
             <!-- 后台 -->
             <div class=" div_center flex column">
                 <div style="margin:5px;font-size:35px;text-align:center;"><b>使用flask/pymysql/bootstrap5全栈开发简易的后台管理系统</b></div>
                 <div style="margin:5px">
-                    <u> 项目背景</u>：制作网页读取数据库中的学生信息并按成绩大小排列显示</div>
-                <div style="margin:5px"><u>实现步骤</u>：<br>
+                    <b> 项目背景</b>：制作网页读取数据库中的学生信息并按成绩大小排列显示</div>
+                <div style="margin:5px"><b>实现步骤</b>：<br>
                     ①调用pymysql编写类以实现对表的<b>增删改查</b> <br>
                     ②在数据库创建两张表user(用户账号密码)/grade(学生成绩)并输入信息 <br>
                     ③调用第一步的类以实现对数据库的增删改查，共包含以下页面：<br>
@@ -113,7 +112,25 @@
                     <b>change页面</b>:点击该行的修改按钮即可跳转到修改页面并在该学生成绩基础上修改成绩
                 </div>
             </div>
+            <hr>
+            <!-- cifa10 -->
+            <div class=" div_center flex column">
+                <div style="margin:5px;font-size:35px;text-align:center;"><b>训练 CNN 对 CIFAR10 数据集进行分类</b></div>
+                <div style="margin:5px">
+                    <b>实现步骤</b>：<br>
+                    <b>①数据准备与处理:</b> 使用 torchvision 进行数据加载与张量转换后，以批数量为 16 并打乱数据存入DataLoader；<br>
+                    <b>②模型构建:</b> 继承 torch.nn.Module 进行模型构建，两个卷积层(5*5*10 的滤波器，后接 LeakyRelu 与标准化层)，后将数据转化为一维喂入两个全连接层，最后转化为十类物体的概率； <br>
+                    <b>③优化器与损失函数:</b> 使用随机梯度下降作为优化器(学习率为 0.01)，多分类采用交叉熵作为损失函数； <br>
+                    <b>④训练:</b>每一轮训练统计此轮的损失总值与对测试集进行测试后的准确率，打印出轮数与时长并将损失总值与正确率传入 tensorboard 以可视化。
+                    <p>
+                        <b>不足:</b> 准确率最高只有65%左右，后续将调整网络结构与在数据预处理环节加入数据标准化以提升分类准确率。
+                    </p>
+
+                </div>
+            </div>
         </div>
+        <hr>
+
         <!-- 校外实践  -->
         <div class="title div_center">
             <div class="title_value">校外实践</div>
@@ -130,9 +147,9 @@
             <div class="title_value">技能证书与奖项</div>
         </div>
         <div class="flex column div_center width85 border whitebg">
-            <div style="margin-top: 5px;margin-bottom:5px;">普通话二级乙等； </div>
-            <div style="margin-top: 5px;margin-bottom:5px;">大学英语四级（CET-4），可运用查阅国外论文；</div>
             <div style="margin-top: 5px;margin-bottom:5px;">2021亚太建模比赛小组三等奖； </div>
+            <div style="margin-top: 5px;margin-bottom:5px;">大学英语四级（CET-4）；</div>
+            <div style="margin-top: 5px;margin-bottom:5px;">普通话二级乙等； </div>
         </div>
         <!-- 自我评价  -->
         <div class="title div_center">
@@ -142,9 +159,7 @@
             <div class="border width85 flex column whitebg" style="margin:20px auto">
                 <div style="margin:5px">1.具备扎实的python基础知识，熟练使用python收集预处理数据，初步掌握使用 pandas 处理数据的能力。</div>
                 <div style="margin:5px">2.了解requests、selenium、beautifulsoup与正则表达式，可使用其以进行简单的网页爬取。（见附件）</div>
-                <div style="margin:5px">3.了解常用神经网络如 CNN/GAN 等的原理与结合运用(使用 Celeba 数据集生成人脸图像，篇幅太大不介绍)，基本熟悉
-pytorch 的各种模块，可使用其进行数据处理(transforms, DataLoader)、模型搭建、训练(GPU 加速)与可视化(tensorboard)。
-                </div>
+                <div style="margin:5px">3.了解常用神经网络如 CNN/GAN 等的原理与结合运用(使用 Celeba 数据集生成人脸图像/动漫头像)，基本熟悉pytorch 的各种模块，可使用其进行数据处理(transforms, DataLoader)、模型搭建、训练(GPU 加速)与可视化(tensorboard)。</div>
                 <div style="margin:5px">4.了解flask、html与css，可以使用它们制作简单的网页（见附件）</div>
                 <div style="margin:5px">5.熟练使用 latex 排版，具有需求分析与拓展思考能力，善于沟通，贴近用户</div>
                 <div style="margin:5px">6.了解linux系统的基本操作指令</div>
